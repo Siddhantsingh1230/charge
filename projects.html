@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Projects</title>
+  <style type="text/css" media="all">
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --transparent: rgba(0, 0, 0, 0);
+  --semi-transparent: rgba(0, 0, 0, 0.8);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  background-color: #1d1e22;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#carousel {
+  color: white;
+  width: 80vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+.carousel-item {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 18em;
+  height: 25em;
+  margin: 1em;
+  display: flex;
+  align-items: flex-end;
+  border-radius: 0.5em;
+  transition: all 0.2s;
+}
+
+.carousel-item:hover {
+  width: 20em;
+  margin-left: 0em;
+  margin-right: 0em;
+}
+
+.details {
+  padding: 1em;
+  border-radius: 0.5em;
+  background-image: linear-gradient(
+    var(--transparent),
+    var(--semi-transparent),
+    var(--semi-transparent)
+  );
+  opacity: 0;
+  transition: all 0.2s;
+  user-select: none;
+}
+
+.carousel-item-link {
+  margin: 0.2em;
+  padding: 0.2em;
+  border: 0.1em solid var(--transparent);
+  box-shadow: 0.15em 0.15em #26b79f;
+  text-decoration: none;
+  color: white;
+}
+@media (hover: hover) {
+  .carousel-item:hover > .details {
+    opacity: 1;
+  }
+
+  .carousel-item-link:hover {
+    border: 0.1em solid #26b79f;
+    background-color: #26b79f;
+    color: black;
+    box-shadow: 0.15em 0.15em var(--transparent);
+  }
+}
+
+@media (hover: none) {
+  .details {
+    opacity: 1;
+  }
+
+  .carousel-item-link {
+    border: 0.1em solid #26b79f;
+    background-color: #26b79f;
+    color: black;
+    box-shadow: 0.15em 0.15em var(--transparent);
+  }
+}
+
+#pr1{
+  background-image: url("glow.jpg");
+}
+
+#pr2 {
+  background-image: url("bub.jpg");
+}
+
+#pr3 {
+  background-image: url("todo.jpg");
+}
+
+#pr4 {
+  background-image: url("calc.jpg");
+  z-index: 2;
+}
+
+
+
+
+
+
+/* ---- START FOOTER ---- */
+footer {
+  position: fixed;
+  background-color:black;
+  border-radius: 5em;
+  bottom: 0.4em;
+  padding: 1em;
+  margin: 0.6em;
+  font-size: 1em;
+  color: #D6D5D5;
+}
+
+#foot{
+  background: linear-gradient(
+    -45deg, 
+    #ee7752, 
+    #e73c7e, 
+    #23a6d5, 
+    #23d5ab);
+  background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#foot:hover{
+  text-decoration: underline;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+#header{
+  color:white;
+  position:absolute;
+  top: 1em;
+  font-size: 1em;
+  text-shadow: 0 0 6px black;
+  
+}
+/* ---- END FOOTER ---- */
+  </style>
+</head>
+<body>
+  <div id="header">
+    <h1>Projects</h1>
+  </div>
+  <div id="carousel">
+    <div class="carousel-item" id="pr1">
+      <div class="details">
+        <h3>Glow Grid</h3>
+        <div>👀 34.5 K &nbsp;&nbsp; 👍 22.3 K</div>
+        <p>The project Contains Elegant looking Grid which is created using pure Css .Try Once
+           
+        </p>
+        <a class="carousel-item-link" href="https://github.com/Siddhantsingh1230/GlowGridUsingCSS">View</a>
+        <a class="carousel-item-link" href="#">Credits</a>
+      </div>
+    </div>
+    <div class="carousel-item" id="pr2">
+      <div class="details">
+        <h3>Bubble.io</h3>
+        <div>👀 22.1 K &nbsp;&nbsp; 👍 13.9 K</div>
+        <p>
+           Another Pure Css Artwork created
+by utilising Multiple Glowing divs and hover effect to mimic a practical Effect.
+        </p>
+        <a class="carousel-item-link" href="https://github.com/Siddhantsingh1230/Bubble.io">View</a>
+        <a class="carousel-item-link" href="#">Credits</a>
+      </div>
+    </div>
+    <div class="carousel-item" id="pr3">
+      <div class="details">
+        <h3>To Do App</h3>
+        <div>👀 43.2 K &nbsp;&nbsp; 👍 37.1 K</div>
+        <p>
+           Simple JavaScript App which is used to note day to day works implemented using Css amd JS
+        </p>
+        <a class="carousel-item-link" href="https://github.com/Siddhantsingh1230/ToDoAppUsingJavaScript">View</a>
+        <a class="carousel-item-link" href="#">Credits</a>
+      </div>
+    </div>
+    <div class="carousel-item" id="pr4">
+      <div class="details">
+        <h3>Simple Calculator</h3>
+        <div>👀 34.5 K &nbsp;&nbsp; 👍 22.3 K</div>
+        <p>
+          My first project where i created Simple Calculator using pure CSS and Html ,this is how i began.
+        </p>
+        <a class="carousel-item-link" href="https://github.com/Siddhantsingh1230/Calculator-Using-Html-And-CSS-">View</a>
+        <a class="carousel-item-link" href="#">Credits</a>
+      </div>
+    </div>
+    
+  <footer>Created by <span id='foot'><a href="index.html">Siddhant Singh<a><span></footer>
+</body>
+</html>
